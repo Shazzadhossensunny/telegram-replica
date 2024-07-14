@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.chat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(../public/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.chat-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(../public/telegram-banner.png);
+  background-position: top right;
+  background-size: 510px auto;
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+}
+
+.capacity {
+  width: calc(100% - 25rem);
+  margin: 0px auto;
+}
+
+.dark {
+  --bg-color: #1a202c;
+  --text-color: #d1d5db;
+}
+
+.dark .bg-white {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark .text-sm {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .capacity {
+    width: 100%;
+    margin: 0px auto;
+  }
+}
